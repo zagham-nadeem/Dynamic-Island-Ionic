@@ -1,0 +1,7 @@
+{
+  "name": "DynamicIsland",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
