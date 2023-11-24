@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="dynamic-island-container">
+
+    <div #dynamicIsland class="dynamic-island" (click)="toggleDynamicIsland()">
+      <ng-container *ngIf="dynamicIslandIsOpen">
+        <!-- Update this 👇 -->
+        <div @fadeSlideInOut class="dynamic-island-contents-container">
+
+          <!-- Update this 👇 -->
+          <div *ngIf="true" class="info-container">
+            <img src="https://avatars.githubusercontent.com/u/80924473?s=200&v=4"/>
+            <div class="texts-container">
+              <span class="playlist">This is Angular</span>
+              <span class="title">Animations are pretty cool</span>
+            </div>
+          </div>
+
+          <!-- Update this 👇 -->
+          <div *ngIf="true" class="progress-container">
+            <span>3:20</span>
+            <ion-progress-bar mode="ios" value="0.7"></ion-progress-bar>
+            <span>-1:30</span>
+          </div>
+
+          <!-- Update this 👇 -->
+          <div *ngIf="true" class="controls-container">
+            <ion-icon name="play-back"></ion-icon>
+            <ion-icon name="play"></ion-icon>
+            <ion-icon name="play-forward"></ion-icon>
+          </div>
+
+        </div>
+      </ng-container>
+    </div>
   </div>
 </ion-content>
